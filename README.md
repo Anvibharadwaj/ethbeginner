@@ -1,6 +1,6 @@
-# Creatin a Token using Solidity
+# Creating a Token using Solidity
 
-This Solidity program is a simple program that demonstrates the basic syntax and functionality of the Solidity programming language. The purpose of this program is to serve as a starting point for those who are new to Solidity and want to get a feel for how it works.
+This Solidity program is a simple program that demonstrates the basic syntax and functionality of the Solidity programming language and how to create a token. The purpose of this program is to serve as a starting point for those who are new to Solidity and want to get a feel for how it works.
 
 ## Description
 
