@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.26;
-
 /*
        REQUIREMENTS
     1. Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
@@ -14,20 +13,20 @@ pragma solidity 0.8.26;
     5. Lastly, your burn function should have conditionals to make sure the balance of "sender" is greater than or equal 
        to the amount that is supposed to be burned.
 */
+contract AssementToken {
 
-contract Tokenforassesment {
-
-    // public variables here
-    string public Tokenname = "cryptokitties";
-    string public Tokenabbr = "kitties";
+    // public variables Token_name,totalabbrv is going to store the name of coins and total supply will store number of supply of coin.
+    string public Token_name = "Zerion";
+    string public Token_abbr = "ze";
+    //totalsupply can't be negative so we will use unsigned datatype.
     uint public Totalsupply = 0;
 
-    // mapping variable here
-    //by the help of mapping the address is associated to uint i.e. unsigned integer and it will return the token amount when we will pass the address.
+    // mapping variable
+    //by the help of mapping, the address is associated to uint i.e. unsigned integer and it will return the token amount when we will pass the address.
     mapping(address => uint) public balances;
 
-    // mint function having 2 parameters address and values that will increases the total supply by that number and increases the balance 
-    //of the “sender” address by that amount
+    // mint function has 2 parameters:- address and values that will increases the total supply by given value and increases the balance 
+    //of the “sender” address by that value
     function mint (address _address,uint _values) public {
         //increasing the totalsupply by the amount passing
         Totalsupply += _values;
@@ -39,9 +38,10 @@ contract Tokenforassesment {
         if (balances[_address] >= _values){
             //will deduct the value from the total supply 
             Totalsupply -= _values;
-            ////will deduct the value from the balance of sender 
+            //will deduct the value from the balance of sender 
             balances[_address] -= _values;
         }
      }
 
 }
+
